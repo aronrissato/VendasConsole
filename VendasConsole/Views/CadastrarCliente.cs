@@ -18,9 +18,9 @@ namespace VendasConsole.Views
             Console.WriteLine("Digite o CPF do cliente:");
             c.Cpf = Console.ReadLine();
 
-
-
-
+            
+            if (DAL.ClienteDAO.ValidarCpf(c.Cpf) == true)
+            { 
             if (DAL.ClienteDAO.CadastrarCliente(c) == true)
             {
                 Console.WriteLine("Cliente cadastrado!");
@@ -28,6 +28,11 @@ namespace VendasConsole.Views
             else
             {
                 Console.WriteLine("Cliente já existe!");
+            }
+            }
+            else
+            {
+                Console.WriteLine("CPF inválido!");
             }
         }
     }
