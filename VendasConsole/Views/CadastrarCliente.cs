@@ -19,7 +19,7 @@ namespace VendasConsole.Views
             c.Cpf = Console.ReadLine();
 
             
-            if (DAL.ClienteDAO.ValidarCpf(c.Cpf) == true)
+            if (Utils.Validacao.ValidarCpf(c.Cpf) == true)
             { 
             if (DAL.ClienteDAO.CadastrarCliente(c) == true)
             {

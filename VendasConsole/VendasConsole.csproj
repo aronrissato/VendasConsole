@@ -47,6 +47,7 @@
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\VendasConsole.cs" />
     <Compile Include="Models\Vendedor.cs" />
+    <Compile Include="Utils\Validacao.cs" />
     <Compile Include="Views\CadastrarCliente.cs" />
     <Compile Include="Views\ListarClientes.cs" />
     <Compile Include="Views\Program.cs" />
