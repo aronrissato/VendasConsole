@@ -15,8 +15,8 @@ namespace VendasConsole
             Console.BackgroundColor = ConsoleColor.DarkRed;
             Console.ResetColor();
             int opcao;
-
             //List<Cliente> clientes = new List<Cliente>();
+
             do
             {
                 Console.Clear();

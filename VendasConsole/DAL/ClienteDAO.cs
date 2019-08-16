@@ -94,7 +94,7 @@ namespace VendasConsole.DAL
             return cpf.EndsWith(digito);
         }
 
-    
+
         public static List<Cliente> ListarClientes()
         {
             return clientes;
