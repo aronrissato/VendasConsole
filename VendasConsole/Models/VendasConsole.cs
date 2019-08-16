@@ -9,5 +9,6 @@ namespace VendasConsole.Models
     class VendasConsole
     {
         List<Cliente> clientes = new List<Cliente>();
+        List<Vendedor> vendedores = new List<Vendedor>();
     }
 }

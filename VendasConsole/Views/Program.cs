@@ -25,6 +25,8 @@ namespace VendasConsole
                 Console.ResetColor();
                 Console.WriteLine("1 - Cadastrar cliente");
                 Console.WriteLine("2 - Listar clientes");
+                Console.WriteLine("3 - Cadastrar vendedor");
+                Console.WriteLine("4 - Listar vendedor");
                 Console.WriteLine("0 - Sair");
                 Console.WriteLine("\nDigite uma opção:");
                 opcao = Convert.ToInt32(Console.ReadLine());
@@ -37,6 +39,14 @@ namespace VendasConsole
 
                     case 2:
                         ListarClientes.Renderizar();
+                        break;
+
+                    case 3:
+                        CadastrarVendedor.Renderizar();
+                        break;
+
+                    case 4:
+                        ListarVendedor.Renderizar();
                         break;
 
                     case 0:

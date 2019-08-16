@@ -19,13 +19,16 @@ namespace VendasConsole.Utils
             int soma;
             int resto;
 
+            #region Validação Simples como ponto e 11 digitos
             cpf = cpf.Trim();
             cpf = cpf.Replace(".", "").Replace("-", "");
 
             if (cpf.Length != 11)
             {
                 return false;
-            }
+            } 
+            #endregion
+
             tempCpf = cpf.Substring(0, 9);
 
             soma = 0;
