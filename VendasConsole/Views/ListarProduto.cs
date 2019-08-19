@@ -7,15 +7,15 @@ using VendasConsole.Models;
 
 namespace VendasConsole.Views
 {
-    class ListarClientes
+    class ListarProduto
     {
         public static void Renderizar()
         {
-            DAL.ClienteDAO.ListarClientes();
-            Console.WriteLine("  -- LISTAR CLIENTES --  ");
-            foreach (Cliente clientesCadastrados in DAL.ClienteDAO.ListarClientes())
+            DAL.ProdutoDAO.ListarProdutos();
+            Console.WriteLine("  -- LISTAR PRODUTOS --  \n");
+            foreach (Produto produtoCadastrado in DAL.ProdutoDAO.ListarProdutos())
             {
-                Console.WriteLine(clientesCadastrados);
+                Console.WriteLine(produtoCadastrado);
             }
         }
     }

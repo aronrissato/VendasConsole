@@ -27,6 +27,8 @@ namespace VendasConsole
                 Console.WriteLine("2 - Listar clientes");
                 Console.WriteLine("3 - Cadastrar vendedor");
                 Console.WriteLine("4 - Listar vendedor");
+                Console.WriteLine("5 - Cadastrar produto");
+                Console.WriteLine("6 - Listar produto");
                 Console.WriteLine("0 - Sair");
                 Console.WriteLine("\nDigite uma opção:");
                 opcao = Convert.ToInt32(Console.ReadLine());
@@ -47,6 +49,14 @@ namespace VendasConsole
 
                     case 4:
                         ListarVendedor.Renderizar();
+                        break;
+
+                    case 5:
+                        CadastrarProduto.Renderizar();
+                        break;
+
+                    case 6:
+                        ListarProduto.Renderizar();
                         break;
 
                     case 0:

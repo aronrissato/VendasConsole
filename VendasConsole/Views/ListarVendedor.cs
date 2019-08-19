@@ -13,7 +13,7 @@ namespace VendasConsole.Views
         {
             DAL.VendedorDAO.ListarVendedor();
             Console.WriteLine("-- LISTAR VENDEDORES --");
-            foreach (var vendedoresCadastrados in DAL.VendedorDAO.ListarVendedor())
+            foreach (Vendedor vendedoresCadastrados in DAL.VendedorDAO.ListarVendedor())
             {
                 Console.WriteLine(vendedoresCadastrados);
             }
