@@ -22,16 +22,26 @@ namespace VendasConsole.DAL
 
         public static bool CadastrarVendedor(Vendedor v)
         {
-            foreach (Vendedor vendedorCadastrado in vendedores)
+            if (BuscarVendedorPorCpf(v) != null)
             {
-                if (vendedorCadastrado.Cpf.Equals(v.Cpf))
-                {
-                    return false;
-                }
+                return false;
             }
             vendedores.Add(v);
             return true;
         }
+
+        public static Vendedor BuscarVendedorPorCpf(Vendedor v)
+        {
+            foreach (Vendedor vendedorCadastrado in vendedores)
+            {
+                if (vendedorCadastrado.Nome.Equals(v.Nome))
+                {
+                    return vendedorCadastrado;
+                }
+            }
+            return null;
+        }
+
 
         public static List<Vendedor> ListarVendedor()
         {

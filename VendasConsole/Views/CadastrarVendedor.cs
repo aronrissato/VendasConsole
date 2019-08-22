@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VendasConsole.DAL;
 using VendasConsole.Models;
+using VendasConsole.Utils;
 
 namespace VendasConsole.Views
 {
@@ -19,9 +21,9 @@ namespace VendasConsole.Views
             v.Cpf = Console.ReadLine();
 
 
-            if (Utils.Validacao.ValidarCpf(v.Cpf) == true)
+            if (Validacao.ValidarCpf(v.Cpf))
             {
-                if (DAL.VendedorDAO.CadastrarVendedor(v) == true)
+                if (VendedorDAO.CadastrarVendedor(v) == true)
                 {
                     Console.WriteLine("Vendedor cadastrado!");
                 }
@@ -34,10 +36,6 @@ namespace VendasConsole.Views
             {
                 Console.WriteLine("CPF inválido!");
             }
-
-
-
         }
-
     }
 }

@@ -13,7 +13,6 @@ namespace VendasConsole.Models
         {
             CriadoEm = DateTime.Now;
         }
-
         public Cliente(string cpf)
         {
             Cpf = cpf;

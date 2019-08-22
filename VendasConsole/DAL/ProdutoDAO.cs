@@ -22,15 +22,24 @@ namespace VendasConsole.DAL
 
         public static bool CadastrarProduto(Produto p)
         {
+            if (BuscarProdutoPorNome(p) != null)
+            {
+                return false;
+            }
+            produtos.Add(p);
+            return true;
+        }
+
+        public static Produto BuscarProdutoPorNome(Produto p)
+        {
             foreach (Produto produtoCadastrado in produtos)
             {
                 if (produtoCadastrado.Nome.Equals(p.Nome))
                 {
-                    return false;
+                    return produtoCadastrado;
                 }
             }
-            produtos.Add(p);
-            return true;
+            return null;
         }
 
         public static List<Produto> ListarProdutos()

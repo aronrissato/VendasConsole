@@ -56,7 +56,7 @@ namespace VendasConsole
                         break;
 
                     case 6:
-                        ListarProduto.Renderizar();
+                        ListarProdutos.Renderizar();
                         break;
 
                     case 0:

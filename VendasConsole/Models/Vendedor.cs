@@ -8,10 +8,6 @@ namespace VendasConsole.Models
 {
     class Vendedor
     {
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public DateTime CriadoEm { get; set; }
-
         public Vendedor()
         {
             CriadoEm = DateTime.Now;
@@ -22,6 +18,10 @@ namespace VendasConsole.Models
             Cpf = cpf;
             CriadoEm = DateTime.Now;
         }
+
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public DateTime CriadoEm { get; set; }
 
 
         public override string ToString()

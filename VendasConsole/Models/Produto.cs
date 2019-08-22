@@ -23,7 +23,7 @@ namespace VendasConsole.Models
         //ToString
         public override string ToString()
         {
-            return "Nome: " + Nome + " | Preco: " + Preco.ToString("C") + " | Qnt em estoque: " + Quantidade;
+            return "Nome: " + Nome + " | Preco: " + Preco.ToString("C2") + " | Qnt em estoque: " + Quantidade;
         }
 
         public override bool Equals(object obj)

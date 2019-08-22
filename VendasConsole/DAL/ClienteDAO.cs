@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VendasConsole.Models;
+using VendasConsole.DAL;
 
 namespace VendasConsole.DAL
 {
@@ -24,7 +25,7 @@ namespace VendasConsole.DAL
         {
             foreach (Cliente clienteCadastrado in clientes)
             {
-                if (clienteCadastrado.Cpf.Equals(c.Cpf))
+                if (BuscarClientePorCpf(c) != null)
                 {
                     return false;
                 }
@@ -32,7 +33,19 @@ namespace VendasConsole.DAL
             clientes.Add(c);
             return true;
         }
-        
+
+        public static Cliente BuscarClientePorCpf(Cliente c)
+        {
+            foreach (Cliente clienteCadastrado in clientes)
+            {
+                if (clienteCadastrado.Cpf.Equals(c.Cpf))
+                {
+                    return clienteCadastrado;
+                }
+            }
+            return null;
+        }
+
         public static List<Cliente> ListarClientes()
         {
             return clientes;

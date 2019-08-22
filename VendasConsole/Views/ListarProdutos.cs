@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VendasConsole.Models;
+using VendasConsole.DAL;
 
 namespace VendasConsole.Views
 {
-    class ListarProduto
+    class ListarProdutos
     {
         public static void Renderizar()
         {
-            DAL.ProdutoDAO.ListarProdutos();
             Console.WriteLine("  -- LISTAR PRODUTOS --  \n");
-            foreach (Produto produtoCadastrado in DAL.ProdutoDAO.ListarProdutos())
+            foreach (Produto produtoCadastrado in ProdutoDAO.ListarProdutos())
             {
                 Console.WriteLine(produtoCadastrado);
             }

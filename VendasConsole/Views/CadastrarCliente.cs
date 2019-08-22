@@ -18,17 +18,17 @@ namespace VendasConsole.Views
             Console.WriteLine("Digite o CPF do cliente:");
             c.Cpf = Console.ReadLine();
 
-            
+
             if (Utils.Validacao.ValidarCpf(c.Cpf) == true)
-            { 
-            if (DAL.ClienteDAO.CadastrarCliente(c) == true)
             {
-                Console.WriteLine("Cliente cadastrado!");
-            }
-            else
-            {
-                Console.WriteLine("Cliente já existe!");
-            }
+                if (DAL.ClienteDAO.CadastrarCliente(c) == true)
+                {
+                    Console.WriteLine("Cliente cadastrado!");
+                }
+                else
+                {
+                    Console.WriteLine("Cliente já existe!");
+                }
             }
             else
             {

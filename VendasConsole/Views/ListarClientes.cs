@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VendasConsole.Models;
+using VendasConsole.DAL;
 
 namespace VendasConsole.Views
 {
@@ -11,9 +12,8 @@ namespace VendasConsole.Views
     {
         public static void Renderizar()
         {
-            DAL.ClienteDAO.ListarClientes();
             Console.WriteLine("  -- LISTAR CLIENTES --  ");
-            foreach (Cliente clientesCadastrados in DAL.ClienteDAO.ListarClientes())
+            foreach (Cliente clientesCadastrados in ClienteDAO.ListarClientes())
             {
                 Console.WriteLine(clientesCadastrados);
             }

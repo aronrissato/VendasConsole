@@ -7,20 +7,19 @@ using VendasConsole.Models;
 
 namespace VendasConsole.Models
 {
-    class Venda
+    class ItemVenda
     {
-        //Construtor
-        public Venda()
+        public ItemVenda()
         {
             CriadoEm = DateTime.Now;
         }
 
-
-        public Cliente Cliente { get; set; }
-        public Vendedor Vendedor { get; set; }
-        public List<ItemVenda> Produtos { get; set; }
+        
+        public Produto Produto { get; set; }
+        public double Preco { get; set; }
+        public int Quantidade { get; set; }
         public DateTime CriadoEm { get; set; }
+
+               
     }
-
-
 }
