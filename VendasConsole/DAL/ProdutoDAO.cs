@@ -42,6 +42,8 @@ namespace VendasConsole.DAL
             return null;
         }
 
+        public static
+
         public static List<Produto> ListarProdutos()
         {
             return produtos;
